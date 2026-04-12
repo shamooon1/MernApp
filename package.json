@@ -1,0 +1,26 @@
+{
+  "name": "ai-write",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && nodemon server.js",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "@google/genai": "^1.20.0",
+    "@stripe/react-stripe-js": "^4.0.2",
+    "@stripe/stripe-js": "^7.9.0",
+    "install": "^0.13.0",
+    "npm": "^11.6.0",
+    "react-router-dom": "^7.9.1"
+  }
+}
