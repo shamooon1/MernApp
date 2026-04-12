@@ -38,6 +38,8 @@ const CheckoutForm = ({ amount, planName, onBack, onSuccess }) => {
   const stripe = useStripe();
   const elements = useElements();
   
+  console.log('Jenkins Test Build - Checkout Component Loaded');
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
