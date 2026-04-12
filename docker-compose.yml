@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  database:
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27017:27017"
+
+  backend:
+    build: ./backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://database:27017/my_mern_db
+    depends_on:
+      - database
+
+  frontend:
+    build: ./frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
